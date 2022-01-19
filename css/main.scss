@@ -8,6 +8,8 @@ a {
     font-size: 1.3rem;
 }
 
+//Imagen principal (Red-nike-shoe)
+
 .hero-img {
     position: absolute;
     top: 0;
@@ -22,10 +24,14 @@ a {
     animation: introLoad 2s;
 }
 
+//logo
+
 .logo {
     color: white;
     font-weight: bold;
 }
+
+//nav-bar
 
 nav {
     position: fixed;
@@ -39,10 +45,14 @@ nav {
     transform: translateX(100%);
     transition: transform .5s ease-in-out;
 
+    //forma a la lista
+
     ul {
         list-style-type: none;
         padding: 0;
         margin-top: 8em;
+
+        //elementos de la lista
 
         a {
             color: black;
@@ -56,6 +66,8 @@ nav {
         }
     }
 
+    //boton cerrar
+
     .close {
         float: right;
         margin: 2em;
@@ -64,6 +76,7 @@ nav {
     }
 }   
 
+//barra superior
 
 header {
     display: flex;
@@ -76,16 +89,22 @@ header {
     }
 }
 
+//titulo
+
 h1 {
     font-size: 3rem;
     margin-top: 2em;
     line-height: 3.3rem;
 }
 
+//subtitulo
+
 .subhead {
     font-size: 1.4rem;
     margin-bottom: 1.5em;
 }
+
+//seccion principal
 
 section.hero {
     color: white;
@@ -93,13 +112,15 @@ section.hero {
     animation: moveDown 1s ease-in-out forwards;
     opacity: 0;
 
+    //swipe indicator
+
     .down-arrow {
         stroke: white;
         position: absolute;
         bottom: 2em;
         width: 1em;
         margin: 1em;
-        margin-bottom: 10em;
+        margin-bottom: 8em;
         animation: moveArrow 1s alternate-reverse infinite;
     }
 
@@ -108,22 +129,30 @@ section.hero {
     }
 }
 
+//cuadros con mas informacion
+
 .more-info {
+
+    //imagenes
 
     img {
         width: 100%;
         object-fit: cover;
-        height: 20em;
         animation: moveDown 1s ease-in-out forwards;
         opacity: 0;
     }
 
+    //titulos
+
     .title {
         font-weight: bold;
         font-size: 1.25rem;
+        margin-top: 2em;
         animation: moveDown 1s ease-in-out forwards;
         opacity: 0;
     }
+
+    //descripcion
 
     .desc {
         line-height: 1.5rem;
@@ -132,21 +161,54 @@ section.hero {
     }
 }
 
+//animacion del nav-bar
+
 .open-nav {
     transform: translateX(0%);
 }
+
+
+//modificacion de pantallas hasta un width de 680px
 
 @media only screen and (min-width: 680px) {
     body {
         margin: 1.5em;
         font-family: 'Poppins', sans-serif;
     }
+
+    .more-info {
+
+        img {
+            width: 100%;
+            object-fit: cover;
+            animation: moveDown 1s ease-in-out forwards;
+            opacity: 0;
+        }
+    
+        .title {
+            font-weight: bold;
+            font-size: 1.25rem;
+            margin-top: 6.3em;
+            animation: moveDown 1s ease-in-out forwards;
+            opacity: 0;
+        }
+    
+        .desc {
+            line-height: 1.5rem;
+            animation: moveDown 1s ease-in-out forwards;
+            opacity: 0;
+        }
+    }
 }
+
+//modificacion de pantallas hasta un width de 920px
 
 @media only screen and (min-width: 920px) {
     .menu {
         display: none;
     }
+
+    //desaparecer nav-bar
 
     nav {
         transform: translateX(0);
@@ -185,6 +247,8 @@ section.hero {
         
     }
 
+    //modificacion del logo en pantallas de ordenador
+
     .logo {
         color:black;
         
@@ -192,6 +256,8 @@ section.hero {
             color: red;
         }
     }
+
+    //modificacion de la seccion principal en pantallas de ordenador
 
     section.hero {
         color: black;
@@ -221,12 +287,14 @@ section.hero {
             animation: moveDown 1s ease-in-out forwards;
             opacity: 0;
         }
-
+        
         .content {
             text-align: right;
             width: 25em;
         }
     }
+
+    //invertir imagen con texto
 
     .feature.flip {
         grid-template-areas: 
@@ -254,6 +322,8 @@ section.hero {
         gap: 0;
     }
 }
+
+//creacion de animaciones
 
 @keyframes introLoad {
     from {
